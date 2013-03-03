@@ -11,5 +11,5 @@ Run the following :
 * `npm install`
 
 ## Development
-The following command will watch and compile Coffeescript and Stylus files. It runs server.js using Supervisor
+The following command will watch and compile Coffeescript and Stylus files. It runs server.js using Supervisor.
 * `cake dev`
