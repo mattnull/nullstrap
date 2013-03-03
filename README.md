@@ -1,7 +1,7 @@
 coffeescript-express
 ====================
 
-Very basic coffeescript / express.js bootstrap
+Very basic coffeescript / express.js bootstrap. Good for quickly setting up a small application or static site
 
 ## Setup
 Run the following : 
