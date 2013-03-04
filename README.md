@@ -6,7 +6,7 @@ Very basic coffeescript / express.js bootstrap. Good for quickly setting up a sm
 * `sudo npm install -g stylus`
 * `sudo npm install -g supervisor`
 * `sudo npm install -g coffee-script`
-* 
+
 ## Setup
 * `npm install`
 
