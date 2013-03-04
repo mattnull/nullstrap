@@ -2,12 +2,12 @@ coffeescript-express
 ====================
 
 Very basic coffeescript / express.js bootstrap. Good for quickly setting up a small application or static site
-
-## Setup
-Run the following : 
+## Dependancies
 * `sudo npm install -g stylus`
 * `sudo npm install -g supervisor`
 * `sudo npm install -g coffee-script`
+* 
+## Setup
 * `npm install`
 
 ## Development
