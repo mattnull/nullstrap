@@ -1,15 +1,11 @@
 {
-  "name": "YOUR_APP_NAME",
+  "name": "",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
     "express": "~3.1.0",
     "stylus": "~0.32.1",
     "socket.io": "~0.9.13"
-  },
-  "devDependencies": {
-    "mocha": "*",
-    "should": "*"
   },
   "engine": "node ~> 0.6.x"
 }
