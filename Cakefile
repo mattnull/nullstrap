@@ -9,6 +9,15 @@ run = (name, args...) ->
   proc.stderr.on('data', (buffer) -> error buffer if buffer = buffer.toString().trim())
   proc.on('exit', (status) -> process.exit(1) if status isnt 0)
 
+task 'setup', 'Setup the bootstrap', () ->
+  run 'npm', 'install', '-g' ,'stylus'
+  run 'npm', 'install', '-g', 'supervisor'
+  run 'npm', 'install', '-g', 'coffee-script'
+  run 'npm', 'install', '-g', 'handlebars'
+  run 'npm', 'install', '-g', 'bower'
+  run 'npm', 'install'
+  run 'bower', 'install'
+
 task 'dev', 'Watch src/ for changes, compile, then output to lib/ ', (options) ->
   
   #server side coffeescript files

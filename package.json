@@ -2,10 +2,18 @@
   "name": "coffeescript-express",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "start": "node server"
+  },
   "dependencies": {
     "express": "~3.1.0",
     "stylus": "~0.32.1",
-    "socket.io": "~0.9.13"
+    "socket.io": "~0.9.13",
+    "handlebars-precompiler": "~1.0.2",
+    "jade": "~0.28.2"
   },
-  "engine": "node ~> 0.6.x"
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.2.x"
+  }
 }
