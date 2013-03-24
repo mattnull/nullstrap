@@ -1,4 +1,3 @@
-fs = require 'fs'
 express = require('express')
 app = express()
 server = require('http').createServer(app)
@@ -33,4 +32,4 @@ io.sockets.on 'connection', (socket) ->
 
 port = process.env.PORT or 3000
 server.listen port, () -> 
-	console.log "Listening on port " + port
+	console.log "Server running on port " + port
