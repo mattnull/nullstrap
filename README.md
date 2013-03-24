@@ -1,4 +1,4 @@
-NullStrap
+# NullStrap
 ## A CoffeeScript / Express.js bootstrap
 
 ### Features
