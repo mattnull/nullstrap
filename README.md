@@ -1,5 +1,10 @@
 NullStrap
-## A CoffeeScript / Express.js bootstrap that has a fully configured Cakefile for auto-installing all dependencies and watching Stylus, CoffeeScript, and Handlebars files.
+## A CoffeeScript / Express.js bootstrap
+### Features
+* Cakefile for a single command install and dev setup
+* Watches folders for Stylus, CoffeeScript, and Handlebars changes
+* Bower support for easily adding client-side dependencies
+
 ====================
 
 ## Technologies
