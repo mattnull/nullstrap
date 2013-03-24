@@ -5,6 +5,7 @@
     "jquery": "~1.9.1",
     "handlebars": "~1.0.0-rc.3",
     "underscore": "~1.4.4",
-    "backbone": "~1.0.0"
+    "backbone": "~1.0.0",
+    "bootstrap": "~2.3.1"
   }
 }

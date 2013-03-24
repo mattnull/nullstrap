@@ -10,6 +10,7 @@ run = (name, args...) ->
   proc.on('exit', (status) -> process.exit(1) if status isnt 0)
 
 task 'install', 'Install bootstrap dependencies', () ->
+
   run 'npm', 'install', '-g' ,'stylus'
   run 'npm', 'install', '-g', 'supervisor'
   run 'npm', 'install', '-g', 'coffee-script'
