@@ -21,16 +21,16 @@
 
 This command needs to be ran first if CoffeeScript is not installed on your system
 
-* run `sudo npm install -g coffee-script`
+run `sudo npm install -g coffee-script` in Terminal
 
 ## Setup
 
 Install all of the dependencies necessary for the bootstrap
 
-* `sudo cake install`
+run `sudo cake install` in Terminal
 
 ## Development
 
 The following command will watch and compile Coffeescript and Stylus files. It runs server.js using Supervisor.
 
-* `cake dev`
+run `cake dev` in Terminal
