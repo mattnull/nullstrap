@@ -13,7 +13,6 @@ task 'install', 'Install bootstrap dependencies', () ->
 
   run 'npm', 'install', '-g' ,'stylus'
   run 'npm', 'install', '-g', 'supervisor'
-  run 'npm', 'install', '-g', 'coffee-script'
   run 'npm', 'install', '-g', 'handlebars'
   run 'npm', 'install', '-g', 'bower'
   run 'npm', 'install'

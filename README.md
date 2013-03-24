@@ -17,6 +17,12 @@
 * Handlebars - http://handlebarsjs.com/
 * CoffeeScript - http://coffeescript.org/
 
+## Dependencies
+
+This command needs to be ran first if CoffeeScript is not installed on your system
+
+* run `sudo npm install -g coffee-script`
+
 ## Setup
 
 Install all of the dependencies necessary for the bootstrap
