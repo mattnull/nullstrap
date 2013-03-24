@@ -31,6 +31,6 @@ run `sudo cake install`
 
 ## Development
 
-The following command will watch and compile Coffeescript and Stylus files. It runs server.js using Supervisor.
+The following command will watch and compile Coffeescript, Stylus, and Handlebars files. It also watches server.js for changes.
 
 run `cake dev`
