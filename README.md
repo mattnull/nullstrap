@@ -38,6 +38,6 @@ The following command will watch and compile Coffeescript, Stylus, and Handlebar
 
 * run `cake dev`
 
-#Deployment
+## Deployment
 
 * run `cake build`
