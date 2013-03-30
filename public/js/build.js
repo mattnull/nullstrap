@@ -1,0 +1,1 @@
+(function(){var e;e=io.connect(),e.on("hello",function(e){return console.log(e)})}).call(this)

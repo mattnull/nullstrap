@@ -16,6 +16,7 @@
 * Jade - http://jade-lang.com/
 * Handlebars - http://handlebarsjs.com/
 * CoffeeScript - http://coffeescript.org/
+* Banshee - http://imulus.github.com/banshee/
 
 ## Dependencies
 
@@ -27,10 +28,16 @@ run `sudo npm install -g coffee-script`
 
 Install all of the dependencies necessary for the bootstrap
 
-run `sudo cake install`
+run `cake system`
+run `cake install`
+
 
 ## Development
 
 The following command will watch and compile Coffeescript, Stylus, and Handlebars files. It also watches server.js for changes.
 
 run `cake dev`
+
+#Deployment
+
+run `cake build`

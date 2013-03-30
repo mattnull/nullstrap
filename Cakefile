@@ -9,6 +9,21 @@ run = (name, args...) ->
   proc.stderr.on('data', (buffer) -> error buffer if buffer = buffer.toString().trim())
   proc.on('exit', (status) -> process.exit(1) if status isnt 0)
 
+task 'system', 'Install system dependancies ', (options) ->
+
+  #Install Dependencies
+
+  run 'sudo', 'npm', 'install', '-g', 'bower'
+  run 'sudo', 'npm', 'install', '-g', 'express'
+  run 'sudo', 'npm', 'install', '-g', 'jade'
+  run 'sudo', 'npm', 'install', '-g', 'supervisor'
+  run 'sudo', 'npm', 'install', '-g', 'banshee'
+  run 'sudo', 'npm', 'install', '-g', 'stylus'
+
+task 'install', 'Install dependancies ', (options) ->
+  run 'npm', 'install'
+  run 'bower', 'install'
+
 task 'dev', 'Watch src/ for changes, compile, then output to lib/ ', (options) ->
 
   #server side coffeescript files
@@ -29,11 +44,11 @@ task 'build', 'Compress and combine javascript and CSS for production', () ->
   run 'banshee', '-c', 'public/js/lib:public/js/build.js'
 
   #compress and combine vendor javascript
-  run 'banshee', '-c', 'public/js/vendor:public/js/vendor.js'
+  run 'banshee', '-c', 'public/js/includes.js:public/js/vendor.js'
 
   #compress and combine css
   run 'banshee', '-c','public/css/lib:public/css/build.css'
 
   #compress and combine vendor css
-  run 'banshee', '-c', 'public/css/vendor:public/css/vendor.css'
+  run 'banshee', '-c', 'public/css/includes.css:public/css/vendor.css'
 
