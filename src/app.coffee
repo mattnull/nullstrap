@@ -47,7 +47,7 @@ app.configure () ->
 app.get '/', (req, res) ->
 	res.render('index')
 
-# Socket.IO
+# Socket Events
 io.sockets.on 'connection', (socket) ->
 	socket.emit 'hello', {data : 'Hi!'}
 
