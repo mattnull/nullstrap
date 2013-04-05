@@ -10,14 +10,11 @@ hbsPrecompiler = require 'handlebars-precompiler'
 app.configure () ->
   app.set('views', __dirname + '/../views')
   app.set('view engine', 'jade')
-  app.set('view options', {layout: false})
   app.use(express.bodyParser())
   app.use(express.methodOverride())
   app.use('/public', express.static(__dirname + '/../public'))
-  app.use('/components', express.static(__dirname + '/../components'))
-  app.use(express.methodOverride())  
+  app.use('/components', express.static(__dirname + '/../components')) 
   app.use(express.cookieParser())
-  app.use(express.bodyParser())
 
   # Heroku redistogo connection
   if process.env.REDISTOGO_URL
