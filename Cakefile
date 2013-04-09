@@ -14,11 +14,11 @@ task 'system', 'Install system dependancies ', () ->
   # install Dependencies
 
   run 'sudo', 'npm', 'install', '-g', 'bower'
-  run 'npm', 'install', '-g', 'express'
-  run 'npm', 'install', '-g', 'jade'
-  run 'npm', 'install', '-g', 'supervisor'
-  run 'npm', 'install', '-g', 'banshee'
-  run 'npm', 'install', '-g', 'stylus'
+  run 'sudo', 'npm', 'install', '-g', 'express'
+  run 'sudo', 'npm', 'install', '-g', 'jade'
+  run 'sudo', 'npm', 'install', '-g', 'supervisor'
+  run 'sudo', 'npm', 'install', '-g', 'banshee'
+  run 'sudo', 'npm', 'install', '-g', 'stylus'
 
 task 'install', 'Install dependancies ', () ->
 
