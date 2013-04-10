@@ -28,7 +28,7 @@ This command needs to be ran first if CoffeeScript is not installed on your syst
 
 Install all of the dependencies necessary for the bootstrap
 
-* run `cake system`
+* run `sudo cake system`
 * run `cake install`
 
 
