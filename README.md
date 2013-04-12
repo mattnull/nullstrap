@@ -17,6 +17,7 @@
 * Handlebars - http://handlebarsjs.com/
 * CoffeeScript - http://coffeescript.org/
 * Banshee - http://imulus.github.com/banshee/
+* Stylus - http://learnboost.github.io/stylus/
 
 ## Dependencies
 
