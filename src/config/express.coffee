@@ -9,12 +9,11 @@ module.exports = (app , passport) ->
     app.set('view engine', 'jade')
     app.set('view options', {layout: false})
     app.use(express.bodyParser())
+    app.use(express.cookieParser())
     app.use(express.methodOverride())
     app.use('/public', express.static(__dirname + '/../../public'))
     app.use('/components', express.static(__dirname + '/../../components'))
-    app.use(express.methodOverride())  
-    app.use(express.cookieParser())
-    app.use(express.bodyParser())
+
     app.use(express.favicon(__dirname+'/../../favicon.ico'));
 
     app.use (err, req, res, next) ->
