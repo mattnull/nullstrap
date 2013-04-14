@@ -4,17 +4,17 @@
 
   socket = io.connect();
 
-  window.MyApp = (_ref = window.MyApp) != null ? _ref : {};
+  window.Namespace = (_ref = window.Namespace) != null ? _ref : {};
 
-  window.MyApp.views = (_ref1 = window.MyApp.views) != null ? _ref1 : {};
+  window.Namespace.views = (_ref1 = window.Namespace.views) != null ? _ref1 : {};
 
   jQuery(function() {
     var App;
 
     App = (function() {
       function App() {
-        this.gs = window.MyApp;
-        this.gs.views.Settings = new window.MyApp.views.Settings;
+        this.gs = window.Namespace;
+        this.gs.views.Settings = new window.Namespace.views.Settings;
       }
 
       App.prototype.unrender = function() {
@@ -52,9 +52,9 @@
       return App;
 
     })();
-    window.MyApp.App = new App();
-    window.MyApp.App.registerPartials();
-    window.MyApp.App.attachEvents();
+    window.Namespace.App = new App();
+    window.Namespace.App.registerPartials();
+    window.Namespace.App.attachEvents();
     return Backbone.history.start();
   });
 

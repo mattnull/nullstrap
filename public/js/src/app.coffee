@@ -1,17 +1,17 @@
 socket = io.connect()
 
 # Application class that instantiates everything
-window.MyApp = window.MyApp ? {}
-window.MyApp.views = window.MyApp.views ? {}
+window.Namespace = window.Namespace ? {}
+window.Namespace.views = window.Namespace.views ? {}
 
 jQuery ->
 	
 	class App
 
 		constructor : () ->
-			@gs = window.MyApp
+			@gs = window.Namespace
 
-			@gs.views.Settings = new window.MyApp.views.Settings
+			@gs.views.Settings = new window.Namespace.views.Settings
 
 		# this unrenders all views
 		unrender : ->
@@ -32,9 +32,9 @@ jQuery ->
 				if key is 'partial'
 					Handlebars.registerPartial(i, Handlebars.templates[i])
 
-	window.MyApp.App = new App()
-	window.MyApp.App.registerPartials()
-	window.MyApp.App.attachEvents()
+	window.Namespace.App = new App()
+	window.Namespace.App.registerPartials()
+	window.Namespace.App.attachEvents()
 	Backbone.history.start()
 
 
