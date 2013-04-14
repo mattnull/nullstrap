@@ -1,6 +1,6 @@
 # Router
 
-window.BelayCapital = window.BelayCapital ? {}
+window.MyApp = window.MyApp ? {}
 
 class Router extends Backbone.Router 
 	
@@ -10,7 +10,7 @@ class Router extends Backbone.Router
 		"_=_" : "account"
 
 	account : () ->
-		window.BelayCapital.App.unrender()
-		window.BelayCapital.views.Settings.render()
+		window.MyApp.App.unrender()
+		window.MyApp.views.Settings.render()
 
-window.BelayCapital.router = new Router
+window.MyApp.router = new Router

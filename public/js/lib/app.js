@@ -4,17 +4,17 @@
 
   socket = io.connect();
 
-  window.BelayCapital = (_ref = window.BelayCapital) != null ? _ref : {};
+  window.MyApp = (_ref = window.MyApp) != null ? _ref : {};
 
-  window.BelayCapital.views = (_ref1 = window.BelayCapital.views) != null ? _ref1 : {};
+  window.MyApp.views = (_ref1 = window.MyApp.views) != null ? _ref1 : {};
 
   jQuery(function() {
     var App;
 
     App = (function() {
       function App() {
-        this.gs = window.BelayCapital;
-        this.gs.views.Settings = new window.BelayCapital.views.Settings;
+        this.gs = window.MyApp;
+        this.gs.views.Settings = new window.MyApp.views.Settings;
       }
 
       App.prototype.unrender = function() {
@@ -29,20 +29,6 @@
       };
 
       App.prototype.attachEvents = function() {
-        $('#signup-form').submit(function(e) {
-          var data, err, form, passwords;
-
-          form = $(this);
-          data = form.serialize();
-          passwords = form.find('[type="password"]');
-          err = $('#signup-error');
-          if (passwords.eq(0).val() !== passwords.eq(1).val()) {
-            err.html('Passwords don\'t match!');
-            return e.preventDefault();
-          } else {
-            return $(this).submit();
-          }
-        });
         return socket.on('hello', function(data) {
           return console.log(data);
         });
@@ -66,9 +52,9 @@
       return App;
 
     })();
-    window.BelayCapital.App = new App();
-    window.BelayCapital.App.registerPartials();
-    window.BelayCapital.App.attachEvents();
+    window.MyApp.App = new App();
+    window.MyApp.App.registerPartials();
+    window.MyApp.App.attachEvents();
     return Backbone.history.start();
   });
 
