@@ -1,6 +1,6 @@
 # Router
 
-window.MyApp = window.MyApp ? {}
+window.Namespace = window.Namespace ? {}
 
 class Router extends Backbone.Router 
 	
@@ -10,7 +10,7 @@ class Router extends Backbone.Router
 		"_=_" : "account"
 
 	account : () ->
-		window.MyApp.App.unrender()
-		window.MyApp.views.Settings.render()
+		window.Namespace.App.unrender()
+		window.Namespace.views.Settings.render()
 
-window.MyApp.router = new Router
+window.Namespace.router = new Router
