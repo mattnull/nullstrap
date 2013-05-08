@@ -7269,5 +7269,5 @@ a.badge:focus {
 
 /** Includes for external CSS libraries **/
 
-/*= require ../components/bootstrap/docs/assets/css/bootstrap.css */
-/*= require ../components/bootstrap/docs/assets/css/bootstrap-responsive.css */
+/*= require ../js/components/bootstrap/docs/assets/css/bootstrap.css */
+/*= require ../js/components/bootstrap/docs/assets/css/bootstrap-responsive.css */
