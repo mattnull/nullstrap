@@ -9,7 +9,7 @@ config =
 	,
 
 	development :
-		env : global.process.env.NODE_ENV || 'development',
+		env : 'development',
 		baseURI : 'http://localhost:3000'
 
 module.exports = if global.process.env.NODE_ENV then config[global.process.env.NODE_ENV] else config.development
