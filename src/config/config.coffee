@@ -1,14 +1,15 @@
-development = 
-	env : global.process.env.NODE_ENV || 'development',
-	baseURI : 'http://localhost:3000',
-	dbURI : 'mongodb://localhost/'
+config = 
+	production : 
+		env : 'production',
+		baseURI : 'http://mysite.com'
+	,
+	staging : 
+		env : 'staging',
+		baseURI : 'http://mystagingsite.com'
+	,
 
-env = development
+	development :
+		env : global.process.env.NODE_ENV || 'development',
+		baseURI : 'http://localhost:3000'
 
-if global.process.env.NODE_ENV is 'production'
-	env = production
-else if global.process.env.NODE_ENV is 'staging'
-	env = staging
-
-
-module.exports = env
+module.exports = if global.process.env.NODE_ENV then config[global.process.env.NODE_ENV] else config.development
