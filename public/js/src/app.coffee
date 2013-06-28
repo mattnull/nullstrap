@@ -1,4 +1,3 @@
-socket = io.connect()
 
 # Application class that instantiates everything
 window.Namespace = window.Namespace ? {}
@@ -9,9 +8,6 @@ jQuery ->
 	class App
 
 		constructor : () ->
-			@gs = window.Namespace
-
-			@gs.views.Settings = new window.Namespace.views.Settings
 
 		# this unrenders all views
 		unrender : ->
