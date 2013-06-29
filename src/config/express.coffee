@@ -44,8 +44,8 @@ module.exports = (app , passport) ->
 
     if not process.env.NODE_ENV
       hbsPrecompiler.watchDir(
-        __dirname + "/../public/templates/src",
-        __dirname + "/../public/templates/templates.js",
+        __dirname + "/../../public/templates/src",
+        __dirname + "/../../public/templates/templates.js",
         ['handlebars']
       )
 
