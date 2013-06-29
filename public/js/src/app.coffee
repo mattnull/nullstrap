@@ -17,11 +17,6 @@ jQuery ->
 
 		attachEvents : () ->
 
-			# Sockets
-			socket.on 'hello', (data) ->
-				console.log(data)
-
-
 		registerPartials : ->
 			for i of Handlebars.templates			
 				key = i.split('-')[0]
