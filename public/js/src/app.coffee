@@ -9,12 +9,6 @@ jQuery ->
 
 		constructor : () ->
 
-		# this unrenders all views
-		unrender : ->
-			views = @gs.views
-			for i of views
-				views[i].unrender()
-
 		attachEvents : () ->
 
 		registerPartials : ->
