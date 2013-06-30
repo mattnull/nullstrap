@@ -58,7 +58,7 @@ task 'dev', 'Watch src/ for changes, compile, then output to lib/ ', () ->
     run 'handlebars', templatesDir, '-f', 'public/js/templates/templates.js'
     run 'uglifyjs', 'public/js/templates/templates.js', '-o','public/js/templates/templates.js'
     if template?
-      growl 'updated template : ' + template
+      growl 'Template Updated : ' + template
 
   # watch client side templates
   templates = fs.readdirSync templatesDir
@@ -67,7 +67,6 @@ task 'dev', 'Watch src/ for changes, compile, then output to lib/ ', () ->
     do (template) ->
       fs.watchFile template, (curr, prev) ->
         if +curr.mtime isnt +prev.mtime
-          console.log template
           compileHandlebars(template)
 
   compileHandlebars()
@@ -103,4 +102,4 @@ task 'build', 'Compress and combine javascript and CSS for production', () ->
 
   # compress and combine vendor css
   run 'banshee', '-c', 'public/css/_includes.css:public/css/vendor.css'
-
+  
