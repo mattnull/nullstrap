@@ -20,6 +20,8 @@ task 'system', 'Install system dependancies ', () ->
   run 'npm', 'install', '-g', 'supervisor'
   run 'npm', 'install', '-g', 'banshee'
   run 'npm', 'install', '-g', 'stylus'
+  run 'npm', 'install', '-g', 'handlebars'
+  run 'npm', 'install', '-g', 'uglify-js'
 
 task 'install', 'Install dependancies ', () ->
 
@@ -48,6 +50,22 @@ task 'dev', 'Watch src/ for changes, compile, then output to lib/ ', () ->
 
   # stylus
   run 'stylus','-o', 'public/css/lib', '-w', 'public/css/src'
+
+  templatesDir = 'public/js/templates/src'
+  compileHandlebars = () ->
+    # pre-compile client-side templates
+    run 'handlebars', templatesDir, '-f', 'public/js/templates/templates.js'
+    run 'uglifyjs', 'public/js/templates/templates.js', '-o','public/js/templates/templates.js'
+
+  # watch client side templates
+  templates = fs.readdirSync templatesDir
+  for i in [0...templates.length]
+    template = templatesDir + '/' + templates[i]
+    fs.watchFile template, (curr, prev) ->
+      if +curr.mtime isnt +prev.mtime
+        compileHandlebars()
+
+  compileHandlebars()
 
   # run server.js using Supervisor
   run 'supervisor', ['server.js']

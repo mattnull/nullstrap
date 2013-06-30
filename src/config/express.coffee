@@ -1,6 +1,5 @@
 express = require('express')
 RedisStore = require('connect-redis')(express)
-hbsPrecompiler = require 'handlebars-precompiler'
 
 module.exports = (app , passport) ->
   
@@ -41,13 +40,6 @@ module.exports = (app , passport) ->
     app.use(passport.initialize())
     app.use(passport.session())
     app.use(app.router)
-
-    if not process.env.NODE_ENV
-      hbsPrecompiler.watchDir(
-        __dirname + "/../../public/js/templates/src",
-        __dirname + "/../../public/js/templates/templates.js",
-        ['handlebars']
-      )
 
   app.ensureAuthenticated = (req, res, next) ->
     return next() if req.isAuthenticated()

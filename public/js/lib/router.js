@@ -15,14 +15,7 @@
     }
 
     Router.prototype.routes = {
-      "account": "account",
-      "": "account",
-      "_=_": "account"
-    };
-
-    Router.prototype.account = function() {
-      window.Namespace.App.unrender();
-      return window.Namespace.views.Settings.render();
+      "": ""
     };
 
     return Router;
