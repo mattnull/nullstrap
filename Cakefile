@@ -1,5 +1,6 @@
 fs = require 'fs'
 flour = require 'flour'
+growl = require 'growl'
 {print} = require 'sys'
 {log, error} = console; print = log
 {spawn, exec} = require 'child_process'
@@ -13,7 +14,7 @@ run = (name, args...) ->
 task 'system', 'Install system dependancies ', () ->
 
   # install Dependencies (Run in sudo)
-
+  run 'gem', 'install', 'terminal-notifier'
   run 'npm', 'install', '-g', 'bower'
   run 'npm', 'install', '-g', 'express'
   run 'npm', 'install', '-g', 'jade'
@@ -52,18 +53,22 @@ task 'dev', 'Watch src/ for changes, compile, then output to lib/ ', () ->
   run 'stylus','-o', 'public/css/lib', '-w', 'public/css/src'
 
   templatesDir = 'public/js/templates/src'
-  compileHandlebars = () ->
+  compileHandlebars = (template) ->
     # pre-compile client-side templates
     run 'handlebars', templatesDir, '-f', 'public/js/templates/templates.js'
     run 'uglifyjs', 'public/js/templates/templates.js', '-o','public/js/templates/templates.js'
+    if template?
+      growl 'updated template : ' + template
 
   # watch client side templates
   templates = fs.readdirSync templatesDir
   for i in [0...templates.length]
     template = templatesDir + '/' + templates[i]
-    fs.watchFile template, (curr, prev) ->
-      if +curr.mtime isnt +prev.mtime
-        compileHandlebars()
+    do (template) ->
+      fs.watchFile template, (curr, prev) ->
+        if +curr.mtime isnt +prev.mtime
+          console.log template
+          compileHandlebars(template)
 
   compileHandlebars()
 
