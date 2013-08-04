@@ -2,8 +2,9 @@ include includes/header
 
 h1 Hello!
 -if(typeof user == 'undefined')
-	a(href="/login") Login
+	a(href="/login") Login / Sign Up
 -else
+	h2 Welcome, #{user.name}!
 	a(href="/logout") Logout
 
 include includes/footer
