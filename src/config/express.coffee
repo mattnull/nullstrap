@@ -13,11 +13,7 @@ module.exports = (app , passport) ->
     app.use('/public', express.static(__dirname + '/../../public'))
     app.use('/components', express.static(__dirname + '/../../components'))
 
-    app.use(express.favicon(__dirname+'/../../favicon.ico'));
-
-    app.use (err, req, res, next) ->
-      console.error(err.stack)
-      res.send(500, 'An error has occured.')
+    # app.use(express.favicon(__dirname+'/../../favicon.ico'));
 
     # Heroku redistogo connection
     if process.env.REDISTOGO_URL
@@ -33,8 +29,8 @@ module.exports = (app , passport) ->
       redis = require('redis').createClient 6379, 'localhost'
       app.use(express.session
         secret : 'meowmeowmeow'
-        maxAge : new Date Date.now() + 60000 # 1 minute
-        store: new RedisStore {client: redis, ttl : 60}
+        maxAge : new Date Date.now() + 72000 # 2 hours
+        store: new RedisStore {client: redis, ttl : 7200}
       )
     
     app.use(passport.initialize())

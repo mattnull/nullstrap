@@ -12,17 +12,6 @@
     App = (function() {
       function App() {}
 
-      App.prototype.unrender = function() {
-        var i, views, _results;
-
-        views = this.gs.views;
-        _results = [];
-        for (i in views) {
-          _results.push(views[i].unrender());
-        }
-        return _results;
-      };
-
       App.prototype.attachEvents = function() {};
 
       App.prototype.registerPartials = function() {

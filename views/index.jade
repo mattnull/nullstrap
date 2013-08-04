@@ -1,5 +1,9 @@
 include includes/header
 
 h1 Hello!
+-if(typeof user == 'undefined')
+	a(href="/login") Login
+-else
+	a(href="/logout") Logout
 
 include includes/footer
