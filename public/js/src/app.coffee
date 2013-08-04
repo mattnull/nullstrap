@@ -20,7 +20,6 @@ jQuery ->
 	window.Namespace.App = new App()
 	window.Namespace.App.registerPartials()
 	window.Namespace.App.attachEvents()
-	Backbone.history.start()
 
 
 

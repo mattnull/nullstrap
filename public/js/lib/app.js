@@ -34,8 +34,7 @@
     })();
     window.Namespace.App = new App();
     window.Namespace.App.registerPartials();
-    window.Namespace.App.attachEvents();
-    return Backbone.history.start();
+    return window.Namespace.App.attachEvents();
   });
 
 }).call(this);
