@@ -6,8 +6,8 @@ config = require './config/config'
 fs = require 'fs'
 
 # Connect to the DB
-mongoose = require 'mongoose'
-mongoose.connect(config.dbURI)
+# mongoose = require 'mongoose'
+# mongoose.connect(config.dbURI)
 
 # Models
 models = __dirname + '/models'
