@@ -56,18 +56,14 @@ task 'dev', 'Watch src/ for changes, compile, then output to lib/ ', () ->
   compileHandlebars = (template) ->
     # pre-compile client-side templates
     run 'handlebars', templatesDir, '-f', 'public/js/templates/templates.js'
-    run 'uglifyjs', 'public/js/templates/templates.js', '-o','public/js/templates/templates.js'
-    if template?
-      growl 'Template Updated : ' + template
 
-  # watch client side templates
+   # watch client side templates
   templates = fs.readdirSync templatesDir
   for i in [0...templates.length]
     template = templatesDir + '/' + templates[i]
     do (template) ->
-      fs.watchFile template, (curr, prev) ->
-        if +curr.mtime isnt +prev.mtime
-          compileHandlebars(template)
+      fs.watch template, (curr, prev) ->
+        compileHandlebars()
 
   compileHandlebars()
 
