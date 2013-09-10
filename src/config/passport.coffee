@@ -26,6 +26,9 @@ module.exports = (passport, config) ->
 
 					if not isMatch
 						done(null, false, {message : 'Incorrect e-mail / password combination.'})
+						
+					# remove password from session
+					delete account.users[0].password
 
 					done(null, account.users[0])
 			else
