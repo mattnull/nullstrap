@@ -23,9 +23,11 @@ module.exports = (passport, config) ->
 				passwords.compare pass, account.users[0].password, (err, isMatch) =>
 					if err
 						done(err)
+						return
 
 					if not isMatch
-						done(null, false, {message : 'Incorrect e-mail / password combination.'})
+						done(false, false, {message : 'Incorrect e-mail / password combination.'})
+						return
 						
 					# remove password from session
 					account.users[0].password = false
