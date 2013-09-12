@@ -3,6 +3,14 @@
 
 module.exports = (app, passport) ->
 
+	routeMiddleware = (req, res, next) ->
+		#Always pass user object and environment variable to views
+		res.locals.user = req.user
+		res.locals.ENV = global.process.env.NODE_ENV
+		return next() if req.isAuthenticated()
+		res.redirect "/login"
+		next()
+		
 	#Index
 	index = require '../controllers/index'
 	app.get '/', index.index
