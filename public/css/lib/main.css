@@ -120,6 +120,15 @@ a.nav-link:hover {
   font-size: 1.2em;
 }
 /** HOME PAGE PROJECTS MODULE **/
+.preview-text-area {
+  background: rgba(0,0,0,0.7);
+  bottom: 0;
+  color: #fff;
+  height: 33%;
+  padding: 10px 20px;
+  position: absolute;
+  width: 100%;
+}
 .thick-blue-top-border {
   background: #35a7d5;
   height: 15px;
@@ -127,13 +136,6 @@ a.nav-link:hover {
 .test-fill {
   background: #f1f1f1;
   height: 200px;
-}
-.preview-text-area {
-  background: rgba(0,0,0,0.3);
-  bottom: 0;
-  height: 33%;
-  position: absolute;
-  width: 100%;
 }
 /** FOOTER **/
 .footer-copywrite {
