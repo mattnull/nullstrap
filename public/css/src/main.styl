@@ -13,6 +13,17 @@ light-green	= rgba(157,208,168,1)
 	background:mid-blue
 
 
+
+/** SPACING HELPERS **/
+.margin-top-5
+	margin-top:5px
+.margin-top-25
+	margin-top:25px
+.margin-top-50
+	margin-top:50px
+
+
+
 /** TYPOGRAPHY **/
 /** Myriad Pro from TypeKit **/
 body
@@ -21,16 +32,25 @@ body
 	font-weight:200
 
 
-/** NAVIGATION **/
+
+/** TOP NAVIGATION AND HEADER**/
 a.nav-link
+	border-radius:5px
 	color:mid-blue
 	font-size:1.2em
-	padding:10px 20px
+	padding:7px 20px 10px 20px
 	text-decoration:none
 	&:hover 
 		background:mid-blue
 		color:white
-.nav ul
+.logo
+	background:url("../../img/logo-362x28.png") 0 0 no-repeat
+	height:28px
+	width:362px
+.navbar
+	background:white
+	height:40px
+	padding-top:30px
 	li 
 		display:inline
 		list-style-type:none
@@ -39,3 +59,41 @@ a.nav-link
 	border-radius:200px
 	height:50px
 	width:50px
+.thick-blue-bottom-border
+	border-bottom:15px solid mid-blue
+	height:100px
+
+
+
+/** HERO SHOT AREA **/
+.large-hero-shot
+	background:url("../../img/large-hero-blur.jpg") 0 -300px no-repeat
+	background-size:cover
+	height:255px
+	width:100%
+.featured-box
+	background:rgba(255,255,255,0.4)
+	height:150px
+.cta-box
+	background:rgba(0,0,0,0.4)
+	height:150px
+
+
+
+/** FOOTER **/
+.footer-copywrite
+	background:dark-blue
+	color:white
+	padding:10px
+.footer-sitemap
+	background:mid-blue
+	color:white
+	font-size:1.2em
+	padding:10px
+	ul 
+		padding-left:0
+	li 
+		list-style-type:none
+	li:first-child
+		font-weight:bold
+

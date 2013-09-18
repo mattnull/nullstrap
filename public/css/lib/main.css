@@ -5,6 +5,16 @@
 .mid-blue-background {
   background: #35a7d5;
 }
+/** SPACING HELPERS **/
+.margin-top-5 {
+  margin-top: 5px;
+}
+.margin-top-25 {
+  margin-top: 25px;
+}
+.margin-top-50 {
+  margin-top: 50px;
+}
 /** TYPOGRAPHY **/
 /** Myriad Pro from TypeKit **/
 body {
@@ -12,18 +22,29 @@ body {
   color: #333;
   font-weight: 200;
 }
-/** NAVIGATION **/
+/** TOP NAVIGATION AND HEADER**/
 a.nav-link {
+  border-radius: 5px;
   color: #35a7d5;
   font-size: 1.2em;
-  padding: 10px 20px;
+  padding: 7px 20px 10px 20px;
   text-decoration: none;
 }
 a.nav-link:hover {
   background: #35a7d5;
   color: #fff;
 }
-.nav ul li {
+.logo {
+  background: url("../../img/logo-362x28.png") 0 0 no-repeat;
+  height: 28px;
+  width: 362px;
+}
+.navbar {
+  background: #fff;
+  height: 40px;
+  padding-top: 30px;
+}
+.navbar li {
   display: inline;
   list-style-type: none;
 }
@@ -32,4 +53,44 @@ a.nav-link:hover {
   border-radius: 200px;
   height: 50px;
   width: 50px;
+}
+.thick-blue-bottom-border {
+  border-bottom: 15px solid #35a7d5;
+  height: 100px;
+}
+/** HERO SHOT AREA **/
+.large-hero-shot {
+  background: url("../../img/large-hero-blur.jpg") 0 -300px no-repeat;
+  background-size: cover;
+  height: 255px;
+  width: 100%;
+}
+.featured-box {
+  background: rgba(255,255,255,0.4);
+  height: 150px;
+}
+.cta-box {
+  background: rgba(0,0,0,0.4);
+  height: 150px;
+}
+/** FOOTER **/
+.footer-copywrite {
+  background: #1f698a;
+  color: #fff;
+  padding: 10px;
+}
+.footer-sitemap {
+  background: #35a7d5;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 10px;
+}
+.footer-sitemap ul {
+  padding-left: 0;
+}
+.footer-sitemap li {
+  list-style-type: none;
+}
+.footer-sitemap li:first-child {
+  font-weight: bold;
 }
