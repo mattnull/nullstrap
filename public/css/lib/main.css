@@ -15,6 +15,25 @@
 .margin-top-50 {
   margin-top: 50px;
 }
+.padding-top-10 {
+  padding-top: 10px;
+}
+/** BUTTONS **/
+/** call to action link on home page **/
+a.cta-button {
+  background: #54b877;
+  border-bottom: 3px solid #3e8a5a;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 12px 70px 15px 70px;
+  text-decoration: none;
+}
+a.cta-button:hover {
+  background: #9dd0a8;
+  color: #fff;
+}
 /** TYPOGRAPHY **/
 /** Myriad Pro from TypeKit **/
 body {
@@ -22,7 +41,7 @@ body {
   color: #333;
   font-weight: 200;
 }
-/** TOP NAVIGATION AND HEADER**/
+/** TOP NAVIGATION AND HEADER **/
 a.nav-link {
   border-radius: 3px;
   color: #35a7d5;
@@ -68,12 +87,28 @@ a.nav-link:hover {
 .featured-box {
   background: rgba(255,255,255,0.4);
   border-radius: 3px;
-  height: 150px;
+  height: 165px;
+  padding-top: 20px;
+}
+.featured-box h3 {
+  margin: 0;
+}
+.featured-box p {
+  font-size: 1.1em;
 }
 .cta-box {
   background: rgba(0,0,0,0.4);
   border-radius: 3px;
-  height: 150px;
+  color: #fff;
+  height: 165px;
+  padding-top: 20px;
+  text-align: center;
+}
+.cta-box h3 {
+  margin: 0;
+}
+.cta-box p {
+  font-size: 1.2em;
 }
 /** FOOTER **/
 .footer-copywrite {
