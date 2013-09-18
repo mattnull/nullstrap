@@ -1,10 +1,22 @@
 include includes/header
 
-h1 Hello!
--if(typeof user == 'undefined')
-	a(href="/login") Login / Sign Up
--else
-	h2 Welcome, #{user.name}!
-	a(href="/logout") Logout
+.container
+	.nav.navbar
+		.logo
+		ul.pull-right
+			li
+				a.nav-link(href="") Invest
+			li
+				a.nav-link(href"") Pitch
+			li
+				a.nav-link(href="") Blog
+			li
+				a.nav-link(href="") About
+			li
+				a.nav-link(href="") Account
+			li.user-photo-circle
+				a(href="")
+
+.container
 
 include includes/footer

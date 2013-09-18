@@ -1,8 +1,41 @@
+/** COLORS **/
+dark-blue 	= rgba(31,105,138,1)
+mid-blue 	= rgba(53,167,213,1)
+light-blue	= rgba(139,214,244,1)
 
+dark-green	= rgba(62,138,90,1)
+mid-green 	= rgba(84,184,119,1)
+light-green	= rgba(157,208,168,1)
+
+.mid-blue-type
+	color:mid-blue
+.mid-blue-background
+	background:mid-blue
+
+
+/** TYPOGRAPHY **/
+/** Myriad Pro from TypeKit **/
 body
-	font-family : "HelveticaNeue-Lite", Helvetica
+	font-family : "myriad-pro", Helvetica, sans-serif
 	color:#333
 	font-weight:200
 
-#main
-	margin-top:90px;
+
+/** NAVIGATION **/
+a.nav-link
+	color:mid-blue
+	font-size:1.2em
+	padding:10px 20px
+	text-decoration:none
+	&:hover 
+		background:mid-blue
+		color:white
+.nav ul
+	li 
+		display:inline
+		list-style-type:none
+.user-photo-circle
+	background:#f5f5f5
+	border-radius:200px
+	height:50px
+	width:50px
