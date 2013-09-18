@@ -5,6 +5,12 @@
 .mid-blue-background {
   background: #35a7d5;
 }
+.mid-green-type {
+  color: #54b877;
+}
+.white-type {
+  color: #fff;
+}
 /** SPACING HELPERS **/
 .margin-bottom-25 {
   margin-bottom: 25px;
@@ -43,9 +49,21 @@ a.cta-button:hover {
 /** TYPOGRAPHY **/
 /** Myriad Pro from TypeKit **/
 body {
-  font-family: "myriad-pro", Helvetica, sans-serif;
+  background: #f1f1f1;
   color: #333;
+  font-family: "myriad-pro", Helvetica, sans-serif;
   font-weight: 200;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "myriad-pro", Helvetica, sans-serif;
+  font-weight: 700;
+}
+.text-shadow {
+  text-shadow: 0 1px 0 #fff;
 }
 /** TOP NAVIGATION AND HEADER **/
 a.nav-link {
@@ -67,6 +85,7 @@ a.nav-link:hover {
 .navbar {
   background: #fff;
   border-bottom: 15px solid #35a7d5;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
   padding: 30px 0;
 }
 .navbar ul {
@@ -133,9 +152,16 @@ a.nav-link:hover {
   background: #35a7d5;
   height: 15px;
 }
+.thick-green-top-border {
+  background: #54b877;
+  height: 15px;
+}
+.test-border {
+  border: 1px solid #333;
+}
 .test-fill {
-  background: #f1f1f1;
-  height: 200px;
+  background: #fff;
+  height: 263px;
 }
 /** FOOTER **/
 .footer-copywrite {
