@@ -18,6 +18,9 @@
 .margin-top-50 {
   margin-top: 50px;
 }
+.margin-top-65 {
+  margin-top: 65px;
+}
 .padding-top-10 {
   padding-top: 10px;
 }
@@ -66,6 +69,9 @@ a.nav-link:hover {
   border-bottom: 15px solid #35a7d5;
   padding: 30px 0;
 }
+.navbar ul {
+  margin: 5px 0 0 0;
+}
 .navbar li {
   display: inline;
   list-style-type: none;
@@ -78,10 +84,10 @@ a.nav-link:hover {
 }
 /** HERO SHOT AREA **/
 .large-hero-shot {
-  background: url("../../img/large-hero-blur.jpg") 0 -300px no-repeat;
+  background: url("../../img/large-hero-blur.jpg") 0 -225px no-repeat;
   background-size: cover;
-  height: 255px;
-  margin-top: 109px;
+  height: 350px;
+  margin-top: 104px;
   width: 100%;
 }
 .featured-box {
@@ -118,6 +124,13 @@ a.nav-link:hover {
 .test-fill {
   background: #f1f1f1;
   height: 200px;
+}
+.preview-text-area {
+  background: rgba(0,0,0,0.3);
+  bottom: 0;
+  height: 33%;
+  position: absolute;
+  width: 100%;
 }
 /** FOOTER **/
 .footer-copywrite {
