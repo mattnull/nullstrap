@@ -6,6 +6,9 @@
   background: #35a7d5;
 }
 /** SPACING HELPERS **/
+.margin-bottom-25 {
+  margin-bottom: 25px;
+}
 .margin-top-5 {
   margin-top: 5px;
 }
@@ -60,8 +63,8 @@ a.nav-link:hover {
 }
 .navbar {
   background: #fff;
-  height: 40px;
-  padding-top: 30px;
+  border-bottom: 15px solid #35a7d5;
+  padding: 30px 0;
 }
 .navbar li {
   display: inline;
@@ -73,21 +76,18 @@ a.nav-link:hover {
   height: 50px;
   width: 50px;
 }
-.thick-blue-bottom-border {
-  border-bottom: 15px solid #35a7d5;
-  height: 100px;
-}
 /** HERO SHOT AREA **/
 .large-hero-shot {
   background: url("../../img/large-hero-blur.jpg") 0 -300px no-repeat;
   background-size: cover;
   height: 255px;
+  margin-top: 109px;
   width: 100%;
 }
 .featured-box {
   background: rgba(255,255,255,0.4);
   border-radius: 3px;
-  height: 165px;
+  height: 200px;
   padding-top: 20px;
 }
 .featured-box h3 {
@@ -100,7 +100,7 @@ a.nav-link:hover {
   background: rgba(0,0,0,0.4);
   border-radius: 3px;
   color: #fff;
-  height: 165px;
+  height: 200px;
   padding-top: 20px;
   text-align: center;
 }
@@ -109,6 +109,15 @@ a.nav-link:hover {
 }
 .cta-box p {
   font-size: 1.2em;
+}
+/** HOME PAGE PROJECTS MODULE **/
+.thick-blue-top-border {
+  background: #35a7d5;
+  height: 15px;
+}
+.test-fill {
+  background: #f1f1f1;
+  height: 200px;
 }
 /** FOOTER **/
 .footer-copywrite {
