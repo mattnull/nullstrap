@@ -17,7 +17,6 @@ accounts = new Schema
 	company : String,
 	email : {type : String, required : true},
 	password : {type : String, required : true},
-	devices : Array,
 	users : [users]
 	
 accounts.pre 'save', (next) ->
