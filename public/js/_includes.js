@@ -1,6 +1,6 @@
 // Includes for external JavaScript libraries
 
-//=	require ../components/jquery/jquery.min.js
+//=	require ../../bower_components/jquery/jquery.min.js
 //=	require	vendor/handlebars.runtime.min.js
-//=	require	../components/underscore/underscore-min.js
-//=	require	../components/bootstrap/dist/js/bootstrap.min.js
+//=	require	../../bower_components/underscore/underscore-min.js
+//=	require	../../bower_components/bootstrap/dist/js/bootstrap.min.js
