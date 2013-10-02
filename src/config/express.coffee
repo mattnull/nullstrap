@@ -12,8 +12,7 @@ module.exports = (app , passport) ->
     app.use(express.methodOverride())
     app.use('/public', express.static(__dirname + '/../../public'))
     app.use('/components', express.static(__dirname + '/../../components'))
-
-    # app.use(express.favicon(__dirname+'/../../favicon.ico'));
+    app.use(express.favicon())
 
     # Heroku redistogo connection
     if process.env.REDISTOGO_URL
