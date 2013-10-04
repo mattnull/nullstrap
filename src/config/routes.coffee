@@ -4,11 +4,14 @@
 module.exports = (app, passport) ->
 
 	routeMiddleware = (req, res, next) ->
+		
+		if not req.isAuthenticated()
+			res.redirect "/login"
+			return
+
 		#Always pass user object and environment variable to views
 		res.locals.user = req.user
 		res.locals.ENV = global.process.env.NODE_ENV
-		return next() if req.isAuthenticated()
-		res.redirect "/login"
 		next()
 		
 	#Index
