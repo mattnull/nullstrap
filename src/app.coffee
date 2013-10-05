@@ -1,3 +1,7 @@
+# Override console.log in production
+# We are doing this bc it kills Heroku performance
+console.log = if global.process.env.NODE_ENV? and global.process.env.NODE_ENV is 'production' then () -> else console.log
+
 express = require('express')
 app = express()
 server = require('http').createServer(app)
