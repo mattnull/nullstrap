@@ -20,9 +20,9 @@
     "passport-local": "~0.1.6",
     "bcrypt": "~0.7.5",
     "request": "~2.21.0",
-    "async": "~0.2.8",
+    "async": "~0.2.9",
     "flour": "~0.5.0",
-    "growl": "~1.7.0"
+    "underscore": "~1.5.2"
   },
   "engines": {
     "node": "0.8.x",
