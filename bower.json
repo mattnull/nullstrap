@@ -2,8 +2,8 @@
   "name": "NullStrap",
   "version": "0.0.1",
   "dependencies": {
-    "jquery": "*",
-    "underscore": "*",
-    "bootstrap": "*"
+    "jquery": "~2",
+    "underscore": "~1",
+    "bootstrap": "~3"
   }
 }
