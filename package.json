@@ -22,7 +22,8 @@
     "request": "~2.21.0",
     "async": "~0.2.9",
     "flour": "~0.5.0",
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "simple-livereload": "0.0.83"
   },
   "engines": {
     "node": "0.8.x",

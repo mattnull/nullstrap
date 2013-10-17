@@ -1,10 +1,11 @@
-include includes/header
+extends includes/header
 
-h1 Hello!
--if(typeof user == 'undefined')
-	a(href="/login") Login / Sign Up
--else
-	h2 Welcome, #{user.name}!
-	a(href="/logout") Logout
+block content
+	h1 Hello!
+	-if(typeof user == 'undefined')
+		a(href="/login") Login / Sign Up
+	-else
+		h2 Welcome, #{user.name}!
+		a(href="/logout") Logout
 
-include includes/footer
+	include includes/footer

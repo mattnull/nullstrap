@@ -1,8 +1,7 @@
 express = require('express')
 RedisStore = require('connect-redis')(express)
-
 module.exports = (app , passport) ->
-  
+
   app.configure () ->
     app.set('views', __dirname + '/../../views')
     app.set('view engine', 'jade')
@@ -10,8 +9,9 @@ module.exports = (app , passport) ->
     app.use(express.bodyParser())
     app.use(express.cookieParser())
     app.use(express.methodOverride())
-    app.use('/public', express.static(__dirname + '/../../public'))
-    app.use('/components', express.static(__dirname + '/../../components'))
+    app.use(express.compress());
+    app.use('/public', express.static(__dirname + '/../../public', {maxAge : 86400000}))
+    app.use('/components', express.static(__dirname + '/../../bower_components', {maxAge : 86400000}))
     app.use(express.favicon())
 
     # Heroku redistogo connection
