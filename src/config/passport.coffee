@@ -15,7 +15,7 @@ module.exports = (passport, config) ->
 
 	# Local
 	passport.use new LocalStrategy (email, pass, done) =>
-
+		
 		Account.findOne {'users.email' : email}, {'users.$' : 1}, (error, account) ->
 
 			if not error and account
@@ -35,3 +35,4 @@ module.exports = (passport, config) ->
 					done(null, account.users[0])
 			else
 				done()
+

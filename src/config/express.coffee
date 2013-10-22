@@ -25,12 +25,16 @@ module.exports = (app , passport) ->
         store: new RedisStore {client: redis, ttl : 7200}
       )
     else # Localhost
-      redis = require('redis').createClient 6379, 'localhost'
-      app.use(express.session
-        secret : 'meowmeowmeow'
-        maxAge : new Date Date.now() + 72000 # 2 hours
-        store: new RedisStore {client: redis, ttl : 7200}
-      )
+      # redis = require('redis').createClient 6379, 'localhost'
+      # app.use(express.session
+      #   secret : 'nullstrapy'
+      #   maxAge : new Date Date.now() + 72000 # 2 hours
+      #   store: new RedisStore {client: redis, ttl : 7200}
+      # )
+
+      app.use(express.cookieParser());
+      app.use(express.cookieSession({secret : "kittens!!!1111"}));    
+
     
     app.use(passport.initialize())
     app.use(passport.session())
