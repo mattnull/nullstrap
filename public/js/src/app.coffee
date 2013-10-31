@@ -1,5 +1,4 @@
 
-# Application class that instantiates everything
 window.Namespace = window.Namespace ? {}
 	
 class App

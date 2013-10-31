@@ -53,7 +53,6 @@ task 'dev', 'Watch src/ for changes, compile, then output to lib/ ', () ->
 
   # stylus
   run 'stylus','-o public/css/lib -w public/css/src'
-
   run 'coffee', '--output lib --watch --compile src'
   run 'coffee', '--output public/js/lib --watch --compile public/js/src'
   # run 'coffee', '--join public/js/build.js --watch --compile public/js/src'
