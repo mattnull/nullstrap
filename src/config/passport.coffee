@@ -17,7 +17,6 @@ module.exports = (passport, config) ->
 	passport.use new LocalStrategy (email, pass, done) ->
 		
 		Account.findOne {email : email}, (error, account) ->
-			console.log account
 			if not error and account
 
 				passwords.compare pass, account.password, (isMatch) ->
