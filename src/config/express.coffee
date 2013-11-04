@@ -33,7 +33,7 @@ module.exports = (app , passport) ->
       # )
 
       app.use(express.cookieParser());
-      app.use(express.cookieSession({secret : "kittens!!!1111"}));    
+      app.use(express.cookieSession({secret : "nullstrap"}));    
 
     
     app.use(passport.initialize())

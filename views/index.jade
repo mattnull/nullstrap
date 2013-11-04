@@ -1,22 +1,9 @@
 include includes/header
-
-//Body
-.container
-	.row
-		.col-xs-12.col-sm-12.hidden-md.hidden-lg
-			.mobile-headline-image
-				img(src="/public/img/headline_950x360.png")
-		.col-xs-12.col-sm-12.col-md-12.col-lg-12
-			h2 PROSTHETICS HAVE BEEN KNOWN TO WORK MIRACLES.
-			p Like helping people win Olympic gold medals, run ultra marathons, even scale mountains.
-			p But what about the everyday miracles that shouldn’t be miracles at all? Things like getting the mail or taking a walk with your grandchildren.
-			p If you dream of moving through life just like you moved through it before, then stop dreaming. It’s now possible. A prosthetic company now exists for you. For people who dream of moving through life the way they always have. We are completely reassessing the prosthetics industry by designing feet with real people in mind. People who believe, like we do, that moving shouldn’t be a dream for anyone, anywhere, ever again.
-			p FITBIONIC. Movement for all.
-		
-		.col-xs-12.col-sm-12.col-md-12.col-lg-12
-			p.coming-soon-copy FITBIONIC is in the process of updating their website. Our new website will be available in December. We appreciate your patience until then. In the meantime, for more information, <a href="">contact us</a>.
-
-		.col-xs-12.col-sm-12.col-md-12.col-lg-12
-			a.orange-link(href="") Technical Documentation
-
+h1 Nullstrap
+- if(typeof user !== 'undefined'){
+	h1 Hello, #{user.name}
+- } else{
+	h2
+		a(href="/login") Login / Signup
+- }
 include includes/footer

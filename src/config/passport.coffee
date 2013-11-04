@@ -14,25 +14,22 @@ module.exports = (passport, config) ->
 	  done(null, obj)
 
 	# Local
-	passport.use new LocalStrategy (email, pass, done) =>
+	passport.use new LocalStrategy (email, pass, done) ->
 		
-		Account.findOne {'users.email' : email}, {'users.$' : 1}, (error, account) ->
-
+		Account.findOne {email : email}, (error, account) ->
+			console.log account
 			if not error and account
 
-				passwords.compare pass, account.users[0].password, (err, isMatch) =>
-					if err
-						done(err)
-						return
+				passwords.compare pass, account.password, (isMatch) ->
 
 					if not isMatch
 						done(false, false, {message : 'Incorrect e-mail / password combination.'})
 						return
 						
 					# remove password from session
-					account.users[0].password = false
+					account.password = false
 
-					done(null, account.users[0])
+					done(null, account)
 			else
-				done()
+				done(true)
 

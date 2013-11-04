@@ -19,15 +19,12 @@ module.exports.createAccount = (req, res) ->
 	user.email = body.email
 
 	user.password = passwords.encrypt body.pass1
-	console.log('hi')
 	accountModel = new Account(user)
-	console.log accountModel
 	accountModel.save (err) ->
 		console.log('ERROR', err)
 		if err
 			res.send JSON.stringify({error : 'An error occured. Please try again.'})
 		else
-			console.log 'hi again'
 			#login the user and redirect
 			req.logIn accountModel, (err) ->
 
