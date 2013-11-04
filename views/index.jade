@@ -2,6 +2,7 @@ include includes/header
 h1 Nullstrap
 - if(typeof user !== 'undefined'){
 	h1 Hello, #{user.name}
+	a(href="/logout") Logout
 - } else{
 	h2
 		a(href="/login") Login / Signup

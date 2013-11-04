@@ -7,7 +7,7 @@ Schema = mongoose.Schema
 accounts = new Schema
 	name : String,
 	company : String,
-	email : {type : String, required : true},
+	email : {type : String, required : true, unique : true},
 	password : {type : String, required : true},
 	
 accounts.pre 'save', (next) ->
