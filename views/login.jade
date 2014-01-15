@@ -1,45 +1,41 @@
 include includes/header
 
-.offwhite-background
-	#main.container
-		.row
-			.col-xs-12.col-s-12.col-md-8.col-lg-8.col-md-offset-2.col-lg-offset-2
-				h2.text-shadow Create an account
-				
-				form#signup-form(action="/createaccount", method="post")
-					.row
-						.col-xs-12.col-s-12.col-md-6.col-lg-6
-							input(type="text", name="name", required, placeholder="FULL NAME")
-						.col-xs-12.col-s-12.col-md-6.col-lg-6	
-							input(type="email", name="email", required,placeholder="EMAIL")
-					.row
-						.col-xs-12.col-s-12.col-md-6.col-lg-6
-							input(type="password", name="pass1",required, placeholder= "PASSWORD")
-						.col-xs-12.col-s-12.col-md-6.col-lg-6
-							input(type="password", name="pass2",required, placeholder= "RE-ENTER PASSWORD")
-					.row
-						.col-xs-12.col-s-12.col-md-12.col-lg-12
-							button.green-button#signup-button Sign Up!
-				div#signup-error
+#main.container
+	.row
+		.col-xs-12
+			h2.text-shadow Create an account
+			
+			form#signup-form(action="/createaccount", method="post")
+				.row
+					.col-xs-12
+						input(type="text", name="name", required, placeholder="FULL NAME")
+					.col-xs-12	
+						input(type="email", name="email", required,placeholder="EMAIL")
+				.row
+					.col-xs-12
+						input(type="password", name="pass1",required, placeholder= "PASSWORD")
+					.col-xs-12
+						input(type="password", name="pass2",required, placeholder= "RE-ENTER PASSWORD")
+				.row
+					.col-xs-12
+						button.green-button#signup-button Sign Up!
+			div#signup-error
 
-		.row
-			.col-xs-12.col-s-12.col-md-8.col-lg-8.col-md-offset-2.col-lg-offset-2
-				h2.text-shadow Login
+	.row
+		.col-xs-12
+			h2.text-shadow Login
 
-				form#login-form(action="/auth", method="post")
-					.row.margin-top-25
-						.col-xs-12.col-s-12.col-m-12.col-lg-12
-							input(type="email", name="username", required, placeholder= "EMAIL")
-					.row.margin-top-10
-						.col-xs-12.col-s-12.col-m-12.col-lg-12
-							input(type="password", name="password", required, placeholder= "PASSWORD")
-					.row.margin-top-25
-						.col-xs-12.col-s-12.col-m-12.col-lg-12
-							button.blue-button#login-button Login
-				div#login-error
+			form#login-form(action="/auth", method="post")
+				.row.
+					.col-xs-12
+						input(type="email", name="username", required, placeholder= "EMAIL")
+				.row.
+					.col-xs-12
+						input(type="password", name="password", required, placeholder= "PASSWORD")
+				.row
+					.col-xs-12
+						button.blue-button#login-button Login
+
+			div#login-error
 		
-		.row.margin-top-25
-			.col-xs-12.col-s-12.col-md-8.col-lg-8.col-md-offset-2.col-lg-offset-2
-				hr
-
 include includes/footer
