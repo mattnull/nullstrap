@@ -30,5 +30,5 @@ module.exports = (passport, config) ->
 
 					done(null, account)
 			else
-				done(true)
+				done(false)
 
